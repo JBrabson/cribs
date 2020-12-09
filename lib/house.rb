@@ -2,6 +2,7 @@ class House
   attr_reader   :price,
                 :address,
                 :house
+
   attr_accessor :rooms
 
   def initialize(price, address)
@@ -13,5 +14,12 @@ class House
 
   def add_room(room)
     @rooms << room
+  end
+
+  def above_market_average?
+    if @price > 500000
+      true
+    else false
+    end
   end
 end
